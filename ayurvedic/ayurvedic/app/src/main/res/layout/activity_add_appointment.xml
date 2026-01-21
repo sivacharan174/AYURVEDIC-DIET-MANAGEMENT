@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                android:background="@drawable/card_bg_modern"
+                android:padding="10dp"
+                app:tint="#FFFFFF"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📅 Schedule Appointment"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Book a consultation"
+                    android:textColor="#B8FFDD"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Patient Selection -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="SELECT PATIENT"
+            android:textColor="#B8FFDD80"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            app:cardBackgroundColor="#1A5D4A"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#00E67630"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="20dp">
+
+            <Spinner
+                android:id="@+id/spPatient"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="12dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Date and Time -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DATE AND TIME"
+            android:textColor="#B8FFDD80"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="20dp">
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                app:cardBackgroundColor="#1A5D4A"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#00E67630"
+                app:strokeWidth="1dp">
+
+                <EditText
+                    android:id="@+id/etDate"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="📅 Select Date"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#B8FFDD60"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="14dp"
+                    android:focusable="false"
+                    android:clickable="true"/>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="52dp"
+                android:layout_marginStart="8dp"
+                app:cardBackgroundColor="#1A5D4A"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="4dp"
+                app:strokeColor="#00E67630"
+                app:strokeWidth="1dp">
+
+                <EditText
+                    android:id="@+id/etTime"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:hint="🕐 Select Time"
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#B8FFDD60"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:paddingHorizontal="14dp"
+                    android:focusable="false"
+                    android:clickable="true"/>
+            </com.google.android.material.card.MaterialCardView>
+        </LinearLayout>
+
+        <!-- Purpose -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="APPOINTMENT PURPOSE"
+            android:textColor="#B8FFDD80"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#1A5D4A"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="20dp">
+
+            <RadioGroup
+                android:id="@+id/rgPurpose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/rbConsultation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🧘 Initial Consultation"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"
+                    android:checked="true"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbFollowup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🔄 Follow-up Visit"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbDietReview"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🥗 Diet Plan Review"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbAssessment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="📋 Dosha Assessment"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"/>
+            </RadioGroup>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Notes -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="ADDITIONAL NOTES"
+            android:textColor="#B8FFDD80"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="8dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#1A5D4A"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="24dp">
+
+            <EditText
+                android:id="@+id/etNotes"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:hint="Any specific concerns or notes..."
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B8FFDD60"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:padding="14dp"
+                android:gravity="top"
+                android:inputType="textMultiLine"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Schedule Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSchedule"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Schedule Appointment"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#0D2818"
+            app:backgroundTint="#00E676"
+            app:cornerRadius="16dp"
+            app:icon="@drawable/ic_arrow_right"
+            app:iconGravity="end"
+            app:iconTint="#0D2818"
+            app:elevation="6dp"/>
+
+    </LinearLayout>
+</ScrollView>

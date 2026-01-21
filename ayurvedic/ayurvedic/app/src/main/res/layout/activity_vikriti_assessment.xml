@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_splash_gradient"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Modern Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/card_bg_modern"
+            android:padding="10dp"
+            app:tint="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="⚖️ Vikriti Assessment"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dosha imbalance (total 100%)"
+                android:textColor="#B8FFDD"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_edit"
+            android:background="@drawable/card_bg_modern"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:tint="#00E676"/>
+    </RelativeLayout>
+
+    <!-- Progress Bar for loading -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminateTint="#00E676"/>
+
+    <!-- Vata -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💨 Vata Imbalance"
+        android:textColor="#B8FFDD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:cardBackgroundColor="#1A5D4A"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:strokeColor="#00E67630"
+        app:strokeWidth="1dp"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/etVata"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter Vata %"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B8FFDD60"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:background="@android:color/transparent"
+            android:paddingHorizontal="16dp"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Pitta -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="🔥 Pitta Imbalance"
+        android:textColor="#B8FFDD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:cardBackgroundColor="#1A5D4A"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:strokeColor="#00E67630"
+        app:strokeWidth="1dp"
+        android:layout_marginBottom="16dp">
+
+        <EditText
+            android:id="@+id/etPitta"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter Pitta %"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B8FFDD60"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:background="@android:color/transparent"
+            android:paddingHorizontal="16dp"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Kapha -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="💧 Kapha Imbalance"
+        android:textColor="#B8FFDD"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        android:layout_marginBottom="8dp"/>
+
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        app:cardBackgroundColor="#1A5D4A"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="4dp"
+        app:strokeColor="#00E67630"
+        app:strokeWidth="1dp"
+        android:layout_marginBottom="32dp">
+
+        <EditText
+            android:id="@+id/etKapha"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:hint="Enter Kapha %"
+            android:textColor="#FFFFFF"
+            android:textColorHint="#B8FFDD60"
+            android:textSize="16sp"
+            android:inputType="number"
+            android:background="@android:color/transparent"
+            android:paddingHorizontal="16dp"/>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Next Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#0D2818"
+        app:backgroundTint="#00E676"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/ic_arrow_right"
+        app:iconGravity="end"
+        app:iconTint="#0D2818"
+        app:elevation="6dp"/>
+
+</LinearLayout>

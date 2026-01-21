@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Modern Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="20dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                android:background="@drawable/card_bg_modern"
+                android:padding="10dp"
+                app:tint="#FFFFFF"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🍽️ Dietary Habits"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="20sp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your eating patterns"
+                    android:textColor="#B8FFDD"
+                    android:textSize="12sp"/>
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/btnEdit"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_edit"
+                android:background="@drawable/card_bg_modern"
+                android:padding="10dp"
+                android:visibility="gone"
+                app:tint="#00E676"/>
+        </RelativeLayout>
+
+        <!-- Progress Bar for loading -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:indeterminateTint="#00E676"/>
+
+        <!-- Diet Type Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DIET TYPE"
+            android:textColor="#B8FFDD80"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#1A5D4A"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <RadioGroup
+                android:id="@+id/rgDietType"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="16dp">
+
+                <RadioButton
+                    android:id="@+id/rbVeg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🥗 Vegetarian"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbNonVeg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🍗 Non-Vegetarian"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbEggetarian"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🥚 Eggetarian"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <RadioButton
+                    android:id="@+id/rbVegan"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌱 Vegan"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"/>
+            </RadioGroup>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Meal Timings Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="MEAL TIMINGS"
+            android:textColor="#B8FFDD80"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            app:cardBackgroundColor="#1A5D4A"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#00E67630"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etBreakfastTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="🌅 Breakfast (e.g., 8:00 AM)"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B8FFDD60"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="16dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            app:cardBackgroundColor="#1A5D4A"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#00E67630"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="8dp">
+
+            <EditText
+                android:id="@+id/etLunchTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="☀️ Lunch (e.g., 1:00 PM)"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B8FFDD60"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="16dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="52dp"
+            app:cardBackgroundColor="#1A5D4A"
+            app:cardCornerRadius="14dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#00E67630"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="16dp">
+
+            <EditText
+                android:id="@+id/etDinnerTime"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:hint="🌙 Dinner (e.g., 8:00 PM)"
+                android:textColor="#FFFFFF"
+                android:textColorHint="#B8FFDD60"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:paddingHorizontal="16dp"/>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Food Preferences Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="FOOD PREFERENCES"
+            android:textColor="#B8FFDD80"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#1A5D4A"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            android:layout_marginBottom="16dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <CheckBox
+                    android:id="@+id/cbSpicy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌶️ Prefers Spicy Food"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/cbSweet"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🍯 Prefers Sweet Food"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/cbOily"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🍟 Prefers Oily/Fried Food"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/cbRaw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🥬 Prefers Raw Food/Salads"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#00E676"
+                    android:paddingStart="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Eating Habits Section -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="EATING HABITS"
+            android:textColor="#B8FFDD80"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:letterSpacing="0.1"
+            android:layout_marginBottom="12dp"/>
+
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:cardBackgroundColor="#1A5D4A"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#FFB74D30"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="24dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <CheckBox
+                    android:id="@+id/cbSkipMeals"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⏭️ Often skips meals"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#FFB74D"
+                    android:paddingStart="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/cbLateNight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌃 Late night eating"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#FFB74D"
+                    android:paddingStart="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/cbFastEating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="⚡ Eats quickly"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#FFB74D"
+                    android:paddingStart="8dp"
+                    android:layout_marginBottom="8dp"/>
+
+                <CheckBox
+                    android:id="@+id/cbSnacking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🍪 Frequent snacking"
+                    android:textColor="#FFFFFF"
+                    android:textSize="14sp"
+                    android:buttonTint="#FFB74D"
+                    android:paddingStart="8dp"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Save Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSave"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:text="Save Dietary Habits"
+            android:textAllCaps="false"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="#0D2818"
+            app:backgroundTint="#00E676"
+            app:cornerRadius="16dp"
+            app:elevation="6dp"/>
+
+    </LinearLayout>
+</ScrollView>

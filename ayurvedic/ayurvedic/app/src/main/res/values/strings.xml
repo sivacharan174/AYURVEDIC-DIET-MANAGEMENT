@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">AyurNutrition</string>
+    
+    <!-- Settings Fragment -->
+    <string name="settings_title">Settings</string>
+    <string name="settings_subtitle">Manage your preferences</string>
+    <string name="settings_section_quick_actions">QUICK ACTIONS</string>
+    <string name="settings_section_data_management">DATA MANAGEMENT</string>
+    
+    <!-- Settings Items -->
+    <string name="settings_analytics_title">Analytics Dashboard</string>
+    <string name="settings_analytics_subtitle">View insights and reports</string>
+    <string name="settings_alerts_title">Clinical Alerts</string>
+    <string name="settings_alerts_subtitle">Important notifications</string>
+    <string name="settings_tasks_title">Tasks &amp; Notifications</string>
+    <string name="settings_tasks_subtitle">Manage your to-do list</string>
+    <string name="settings_reports_title">Generate Reports</string>
+    <string name="settings_reports_subtitle">Create PDF reports</string>
+    <string name="settings_seasonal_foods_title">Seasonal Foods</string>
+    <string name="settings_permissions_title">Permissions</string>
+    <string name="settings_add_food_title">Add Custom Food</string>
+    <string name="settings_logout">Logout</string>
+    
+    <!-- General -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
