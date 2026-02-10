@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <!-- Modern Header -->
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp">
+
+            <ImageView
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_back"
+                android:background="@drawable/card_bg_modern"
+                android:padding="10dp"
+                app:tint="#FFFFFF"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_centerHorizontal="true">
+
+                <TextView
+                    android:id="@+id/tvTitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Food Database"
+                    android:textColor="#FFFFFF"
+                    android:textStyle="bold"
+                    android:textSize="20sp"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:id="@+id/tvSubtitle"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Browse Ayurvedic foods"
+                    android:textColor="#B8FFDD"
+                    android:textSize="12sp"
+                    android:layout_gravity="center"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+        <!-- Modern Search Bar -->
+        <com.google.android.material.card.MaterialCardView
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            app:cardBackgroundColor="#1A5D4A"
+            app:cardCornerRadius="25dp"
+            app:cardElevation="4dp"
+            app:strokeColor="#00E67630"
+            app:strokeWidth="1dp"
+            android:layout_marginBottom="12dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:paddingHorizontal="16dp">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ay_search"
+                    app:tint="#B8FFDD"/>
+
+                <EditText
+                    android:id="@+id/etSearch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:hint="Search foods..."
+                    android:textColor="#FFFFFF"
+                    android:textColorHint="#B8FFDD80"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:paddingStart="12dp"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"/>
+            </LinearLayout>
+        </com.google.android.material.card.MaterialCardView>
+
+        <!-- Modern Filter Chips -->
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none"
+            android:layout_marginBottom="16dp">
+
+            <com.google.android.material.chip.ChipGroup
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:singleSelection="true">
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btnAll"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="All"
+                    android:textColor="#0D2818"
+                    app:chipBackgroundColor="#00E676"
+                    app:chipCornerRadius="20dp"
+                    android:checked="true"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btnGrains"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌾 Grains"
+                    android:textColor="#FFFFFF"
+                    app:chipBackgroundColor="#1A5D4A"
+                    app:chipCornerRadius="20dp"
+                    app:chipStrokeColor="#00E67640"
+                    app:chipStrokeWidth="1dp"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btnVegetables"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🥬 Vegetables"
+                    android:textColor="#FFFFFF"
+                    app:chipBackgroundColor="#1A5D4A"
+                    app:chipCornerRadius="20dp"
+                    app:chipStrokeColor="#00E67640"
+                    app:chipStrokeWidth="1dp"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btnFruits"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🍎 Fruits"
+                    android:textColor="#FFFFFF"
+                    app:chipBackgroundColor="#1A5D4A"
+                    app:chipCornerRadius="20dp"
+                    app:chipStrokeColor="#00E67640"
+                    app:chipStrokeWidth="1dp"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btnDairy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🥛 Dairy"
+                    android:textColor="#FFFFFF"
+                    app:chipBackgroundColor="#1A5D4A"
+                    app:chipCornerRadius="20dp"
+                    app:chipStrokeColor="#00E67640"
+                    app:chipStrokeWidth="1dp"/>
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/btnSpices"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="🌶️ Spices"
+                    android:textColor="#FFFFFF"
+                    app:chipBackgroundColor="#1A5D4A"
+                    app:chipCornerRadius="20dp"
+                    app:chipStrokeColor="#00E67640"
+                    app:chipStrokeWidth="1dp"/>
+            </com.google.android.material.chip.ChipGroup>
+        </HorizontalScrollView>
+
+        <!-- Food List -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvFoods"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:clipToPadding="false"
+            android:paddingBottom="80dp"/>
+
+    </LinearLayout>
+
+    <!-- Floating Selection Bar (visible in select mode) -->
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/selectionBar"
+        android:layout_width="match_parent"
+        android:layout_height="64dp"
+        android:layout_gravity="bottom"
+        android:layout_margin="16dp"
+        app:cardBackgroundColor="#1A5D4A"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="8dp"
+        android:visibility="gone">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:paddingHorizontal="16dp">
+
+            <TextView
+                android:id="@+id/tvSelectionCount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="0 items selected"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnClearSelection"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="Clear"
+                android:textColor="#FFFFFF"
+                android:textAllCaps="false"
+                app:backgroundTint="#2E5746"
+                app:cornerRadius="20dp"
+                android:layout_marginEnd="8dp"/>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnDone"
+                android:layout_width="wrap_content"
+                android:layout_height="40dp"
+                android:text="✓ Done"
+                android:textColor="#0D2818"
+                android:textAllCaps="false"
+                android:textStyle="bold"
+                app:backgroundTint="#00E676"
+                app:cornerRadius="20dp"/>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+</FrameLayout>

@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Modern Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/card_bg_modern"
+            android:padding="10dp"
+            app:tint="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Meal Structure"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plan daily meals"
+                android:textColor="#B8FFDD"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnPreview"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@android:drawable/ic_menu_view"
+            android:background="@drawable/card_bg_modern"
+            android:padding="10dp"
+            app:tint="#B8FFDD"
+            android:layout_alignParentEnd="true"/>
+    </RelativeLayout>
+
+    <!-- Meal Tabs with Material Chips -->
+    <HorizontalScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_marginBottom="12dp">
+
+        <com.google.android.material.chip.ChipGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:singleSelection="true">
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/btnMorning"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌅 Morning"
+                android:textColor="#0D2818"
+                app:chipBackgroundColor="#00E676"
+                app:chipCornerRadius="20dp"
+                android:checked="true"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/btnBreakfast"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍳 Breakfast"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#1A5D4A"
+                app:chipCornerRadius="20dp"
+                app:chipStrokeColor="#00E67640"
+                app:chipStrokeWidth="1dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/btnLunch"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍛 Lunch"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#1A5D4A"
+                app:chipCornerRadius="20dp"
+                app:chipStrokeColor="#00E67640"
+                app:chipStrokeWidth="1dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/btnEvening"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🍵 Evening"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#1A5D4A"
+                app:chipCornerRadius="20dp"
+                app:chipStrokeColor="#00E67640"
+                app:chipStrokeWidth="1dp"/>
+
+            <com.google.android.material.chip.Chip
+                android:id="@+id/btnDinner"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🌙 Dinner"
+                android:textColor="#FFFFFF"
+                app:chipBackgroundColor="#1A5D4A"
+                app:chipCornerRadius="20dp"
+                app:chipStrokeColor="#00E67640"
+                app:chipStrokeWidth="1dp"/>
+        </com.google.android.material.chip.ChipGroup>
+    </HorizontalScrollView>
+
+    <!-- Current Meal Section Header -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/tvMealTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Morning (6-8 AM)"
+            android:textColor="#FFFFFF"
+            android:textStyle="bold"
+            android:textSize="16sp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0 items"
+            android:textColor="#B8FFDD"
+            android:textSize="12sp"/>
+    </LinearLayout>
+
+    <!-- Food Items List -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvMealItems"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:clipToPadding="false"/>
+
+    <!-- Add Food Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnAddFood"
+        android:layout_width="match_parent"
+        android:layout_height="48dp"
+        android:text="+ Add Food Item"
+        android:textAllCaps="false"
+        android:textSize="14sp"
+        android:textColor="#00E676"
+        app:backgroundTint="#1A5D4A"
+        app:cornerRadius="14dp"
+        app:strokeColor="#00E67640"
+        app:strokeWidth="1dp"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Smart Actions Row -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnSuggestions"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="🌿 Suggestions"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#1565C0"
+            app:cornerRadius="14dp"
+            android:layout_marginEnd="4dp"/>
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnCheckConflicts"
+            android:layout_width="0dp"
+            android:layout_height="48dp"
+            android:layout_weight="1"
+            android:text="⚠️ Check Conflicts"
+            android:textAllCaps="false"
+            android:textSize="13sp"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#E65100"
+            app:cornerRadius="14dp"
+            android:layout_marginStart="4dp"/>
+    </LinearLayout>
+
+    <!-- Save Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Save Diet Chart"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#0D2818"
+        app:backgroundTint="#00E676"
+        app:cornerRadius="16dp"
+        app:elevation="6dp"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

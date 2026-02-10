@@ -1,0 +1,326 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_splash_gradient"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <!-- Modern Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/card_bg_modern"
+            android:padding="10dp"
+            app:tint="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔐 Permissions"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Manage user access"
+                android:textColor="#B8FFDD"
+                android:textSize="12sp"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <!-- Current Role Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#1A5D4A"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        android:layout_marginBottom="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="20dp"
+            android:gravity="center_vertical">
+
+            <FrameLayout
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:background="@drawable/avatar_circle">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="👤"
+                    android:textSize="24sp"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginStart="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Your Role"
+                    android:textColor="#B8FFDD"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/tvCurrentRole"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Administrator"
+                    android:textColor="#FFFFFF"
+                    android:textSize="20sp"
+                    android:textStyle="bold"/>
+            </LinearLayout>
+        </LinearLayout>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Permissions Section -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="PERMISSIONS"
+        android:textColor="#B8FFDD80"
+        android:textSize="12sp"
+        android:textStyle="bold"
+        android:letterSpacing="0.1"
+        android:layout_marginBottom="12dp"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Patient Management -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#1A5D4A"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="👥 Patient Management"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <CheckBox
+                        android:id="@+id/cbViewPatients"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Patients"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:buttonTint="#00E676"
+                        android:paddingStart="8dp"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/cbAddPatients"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Add Patients"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:buttonTint="#00E676"
+                        android:paddingStart="8dp"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/cbEditPatients"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit Patients"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:buttonTint="#00E676"
+                        android:paddingStart="8dp"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/cbDeletePatients"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Delete Patients"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:buttonTint="#EF5350"
+                        android:paddingStart="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Diet Management -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#1A5D4A"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="🍽️ Diet Charts"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <CheckBox
+                        android:id="@+id/cbViewDiets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Diet Charts"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:buttonTint="#00E676"
+                        android:paddingStart="8dp"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/cbCreateDiets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Create Diet Charts"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:buttonTint="#00E676"
+                        android:paddingStart="8dp"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/cbEditDiets"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Edit Diet Charts"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:buttonTint="#00E676"
+                        android:paddingStart="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Reports -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="#1A5D4A"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="4dp"
+                android:layout_marginBottom="12dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="📊 Reports"
+                        android:textColor="#FFFFFF"
+                        android:textStyle="bold"
+                        android:textSize="15sp"
+                        android:layout_marginBottom="8dp"/>
+
+                    <CheckBox
+                        android:id="@+id/cbViewReports"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="View Reports"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:buttonTint="#00E676"
+                        android:paddingStart="8dp"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/cbGenerateReports"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Generate Reports"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:buttonTint="#00E676"
+                        android:paddingStart="8dp"
+                        android:checked="true"/>
+
+                    <CheckBox
+                        android:id="@+id/cbShareReports"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Share Reports"
+                        android:textColor="#FFFFFF"
+                        android:textSize="14sp"
+                        android:buttonTint="#00E676"
+                        android:paddingStart="8dp"/>
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+    </ScrollView>
+
+    <!-- Save Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnSave"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Save Permissions"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#0D2818"
+        app:backgroundTint="#00E676"
+        app:cornerRadius="16dp"
+        app:elevation="6dp"
+        android:layout_marginTop="12dp"/>
+
+</LinearLayout>

@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="@drawable/bg_splash_gradient">
+
+    <!-- Modern Header -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp">
+
+        <ImageView
+            android:id="@+id/btnBack"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@drawable/ic_back"
+            android:background="@drawable/card_bg_modern"
+            android:padding="10dp"
+            app:tint="#FFFFFF"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/tvTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔥 Agni Assessment"
+                android:textColor="#FFFFFF"
+                android:textStyle="bold"
+                android:textSize="20sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Select your digestion pattern"
+                android:textColor="#B8FFDD"
+                android:textSize="12sp"/>
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/btnEdit"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:src="@drawable/ic_edit"
+            android:background="@drawable/card_bg_modern"
+            android:padding="10dp"
+            android:visibility="gone"
+            app:tint="#00E676"/>
+    </RelativeLayout>
+
+    <!-- Progress Bar for loading -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminateTint="#00E676"/>
+
+    <!-- Agni Options Card -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="#1A5D4A"
+        app:cardCornerRadius="20dp"
+        app:cardElevation="6dp"
+        android:layout_marginBottom="24dp">
+
+        <RadioGroup
+            android:id="@+id/rgAgni"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="16dp">
+
+            <RadioButton
+                android:id="@+id/rbSama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="⚖️ Sama Agni\nBalanced digestion, regular appetite"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:buttonTint="#00E676"
+                android:padding="12dp"
+                android:background="@drawable/card_bg_modern"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rbTikshna"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🔥 Tikshna Agni\nStrong digestion, excessive appetite"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:buttonTint="#00E676"
+                android:padding="12dp"
+                android:background="@drawable/card_bg_modern"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rbManda"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🐢 Manda Agni\nSlow digestion, poor appetite"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:buttonTint="#00E676"
+                android:padding="12dp"
+                android:background="@drawable/card_bg_modern"
+                android:layout_marginBottom="8dp"/>
+
+            <RadioButton
+                android:id="@+id/rbVishama"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="🌀 Vishama Agni\nIrregular digestion, fluctuating appetite"
+                android:textColor="#FFFFFF"
+                android:textSize="15sp"
+                android:buttonTint="#00E676"
+                android:padding="12dp"
+                android:background="@drawable/card_bg_modern"/>
+        </RadioGroup>
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Spacer -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"/>
+
+    <!-- Next Button -->
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btnNext"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:text="Next"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:textColor="#0D2818"
+        app:backgroundTint="#00E676"
+        app:cornerRadius="16dp"
+        app:icon="@drawable/ic_arrow_right"
+        app:iconGravity="end"
+        app:iconTint="#0D2818"
+        app:elevation="6dp"/>
+
+</LinearLayout>
